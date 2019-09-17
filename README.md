@@ -84,9 +84,12 @@ We show here the graph of the agents that were able to solve the task in 1039 ep
 
 The graph is relatively interesting, as the agents are not able to learn anything at the beginning (sometimes the ball passes once over the net but not more). Past 900 episodes, the agents begin to learn very quickly. Note that the better the agents become, the longer the episodes will be, so that the agents will be able to extract more information on longer episodes than short ones (in contrast, the two previous had a fix length). This may explain the exponential behaviour of this graph.
 
-Note that this graph is quite different to the graphs of the two previous projects, where the agent learns slowly at the beginning, fast in the middle and slowly again at the end. Also the length of the episodes are far shorter than in the other tasks, so that explains why the number of required episodes is higher. We wanted to solve the task in less than 1000 episodes, but failed to do so.
+Note that this graph is quite different to the graphs of the two previous projects, where the agent learns slowly at the beginning, fast in the middle and slowly again at the end. Also the length of the episodes are far shorter than in the other tasks, so that explains why the number of required episodes is higher. We wanted to solve the task in less than 1000 episodes, but failed to do so. Using the actual parameters, you should expect to solve the task in between 1000 and 2000 episodes.
 
-As an illustration of how our trained agents behave, we show the following gif:
+As an illustration of how our trained agents behave, we show the following gif, that achieved a score of 1.8:
 
 ![Trained Agent][image2]
 
+##Future work
+
+In future, we would like to train similar tasks in even more challenging environments, such as the soccer environment. We also would like to train the agents in some competitive game, using the Alpha Zero algorithm. This algorithm (and Alpha Go) got us interested in Reinforcement Learning and we hope being able to implement this in a personal project.
