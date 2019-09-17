@@ -45,7 +45,7 @@ def maddpg(n_episodes = 5000):
 
 	    while True:
 	        actions = agent.act(state, noise)
-	        #noise *= 0.9999
+	        noise *= 0.9999
 	        actions_array = torch.stack(actions).detach().numpy()
 	        env_info = env.step(actions_array)[brain_name]  
 	        next_state = env_info.vector_observations         
@@ -73,14 +73,14 @@ def maddpg(n_episodes = 5000):
 
 	    if i_episode % 100:
 	    	for i in range(2):
-	    		torch.save(agent.maddpg_agent[i].actor.state_dict(), 'checkpoint_actor{}.pth'.format(i))
-	    		torch.save(agent.maddpg_agent[i].critic.state_dict(), 'checkpoint_critic{}.pth'.format(i))
+	    		torch.save(agent.maddpg_agent[i].actor.state_dict(), 'bin/checkpoint_actor{}.pth'.format(i))
+	    		torch.save(agent.maddpg_agent[i].critic.state_dict(), 'bin/checkpoint_critic{}.pth'.format(i))
 
 	    if np.mean(scores_window) >= 0.5:
 	    	print('\nEnvironment solved in {:d} episodes!\tAverage Score: {:.3f}'.format(i_episode - 100, np.mean(scores_window)))
 	    	for i in range(2):
-	    		torch.save(agent.maddpg_agent[i].actor.state_dict(), 'actor{}_finished.pth'.format(i))
-	    		torch.save(agent.maddpg_agent[i].critic.state_dict(), 'critic{}_finished.pth'.format(i))
+	    		torch.save(agent.maddpg_agent[i].actor.state_dict(), 'bin/actor{}_finished.pth'.format(i))
+	    		torch.save(agent.maddpg_agent[i].critic.state_dict(), 'bin/critic{}_finished.pth'.format(i))
 	    	break
 
 if __name__ == '__main__':
