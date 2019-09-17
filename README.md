@@ -90,6 +90,6 @@ As an illustration of how our trained agents behave, we show the following gif, 
 
 ![Trained Agent][image2]
 
-##Future work
+## Future work
 
 In future, we would like to train similar tasks in even more challenging environments, such as the soccer environment. We also would like to train the agents in some competitive game, using the Alpha Zero algorithm. This algorithm (and Alpha Go) got us interested in Reinforcement Learning and we hope being able to implement this in a personal project.
