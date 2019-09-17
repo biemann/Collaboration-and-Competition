@@ -86,7 +86,7 @@ The graph is relatively interesting, as the agents are not able to learn anythin
 
 Note that this graph is quite different to the graphs of the two previous projects, where the agent learns slowly at the beginning, fast in the middle and slowly again at the end. Also the length of the episodes are far shorter than in the other tasks, so that explains why the number of required episodes is higher. We wanted to solve the task in less than 1000 episodes, but failed to do so. Using the actual parameters, you should expect to solve the task in between 1000 and 2000 episodes.
 
-As an illustration of how our trained agents behave, we show the following gif, that achieved a score of 1.8:
+As an illustration of how our trained agents behave, that achieved a score of 1.8 in the following gif:
 
 ![Trained Agent][image2]
 
